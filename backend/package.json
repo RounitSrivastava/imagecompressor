@@ -1,21 +1,14 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-  "start": "concurrently \"node index.js\" \"python ocr/server.py\""
-},
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+    "start": "node index.js"
+  },
   "type": "commonjs",
   "dependencies": {
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "multer": "^2.0.2"
-  },
-  "devDependencies": {
-    "concurrently": "^9.2.1"
   }
 }
