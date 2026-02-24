@@ -37,7 +37,7 @@ export default function PdfToWord() {
 
     } catch (err) {
       console.error(err);
-      setError("PDF to Word conversion failed.");
+      setError("PDF to Wordsd conversion failed.");
       setLoading(false);
     }
   };
