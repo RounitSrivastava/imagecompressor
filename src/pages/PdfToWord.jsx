@@ -14,7 +14,7 @@ export default function PdfToWord() {
     formData.append("file", file);
 
     try {
-      const response = await fetch("http://localhost:7000/pdf-to-word", {
+      const response = await fetch("${process.env.REACT_APP_BACKEND_URL}/pdf-to-word", {
         method: "POST",
         body: formData,
       });

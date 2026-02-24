@@ -14,7 +14,7 @@ export default function EditPdf() {
     formData.append("file", file);
 
     try {
-      const res = await fetch("http://localhost:7000/pdf-to-word", {
+      const res = await fetch("${process.env.REACT_APP_BACKEND_URL}/pdf-to-word", {
         method: "POST",
         body: formData,
       });

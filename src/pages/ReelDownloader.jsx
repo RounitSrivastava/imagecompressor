@@ -15,14 +15,16 @@ export default function ReelDownloader() {
     setError("");
 
     try {
-      // Backend endpoint (we’ll build this next)
-      const res = await fetch("http://localhost:5000/reel-download", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ url }),
-      });
+      const res = await fetch(
+        `${process.env.REACT_APP_BACKEND_URL}/reel-download`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ url }),
+        }
+      );
 
       if (!res.ok) throw new Error();
 
