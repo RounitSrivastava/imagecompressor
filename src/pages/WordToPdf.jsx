@@ -14,7 +14,7 @@ export default function WordToPdf() {
     formData.append("file", file);
 
     try {
-      const res = await fetch("${process.env.REACT_APP_BACKEND_URL}/word-to-pdf", {
+      const res = await fetch("https://imagecompressor-rhlk.onrender.com/word-to-pdf", {
         method: "POST",
         body: formData,
       });
